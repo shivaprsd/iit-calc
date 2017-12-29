@@ -8,6 +8,8 @@ html{ margin: 0; }
 body{
     font-family: Arial;
     margin: 0;
+    position: fixed;
+    transform-origin: left top;
 }
 .calc_close{
 	background: url('../images/Sprite.png') no-repeat -204px -13px;
@@ -139,6 +141,7 @@ padding:10px;
     width: 463px;
     border-bottom: 7px solid #999;
     position:relative;
+    margin: 0 auto;
 }
 #keyPad_Help{
    /* position: absolute!important;

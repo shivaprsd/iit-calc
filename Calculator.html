@@ -7,6 +7,7 @@
 	<script type="text/javascript" src="js/oscZenoedited.js" ></script>           
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<script type="text/javascript">
             $(function() {
     <!--  $("#keyPad").draggable({ -->
@@ -238,6 +239,22 @@
 	</div>
 	</div>
     
-    
+    <script type="text/javascript">
+        function fitCalcToScreen() {
+            calc_container = document.getElementById("keyPad");
+            hscale = document.documentElement.clientHeight / calc_container.clientHeight;
+            wscale = document.documentElement.clientWidth / calc_container.clientWidth;
+            scale = Math.min(hscale, wscale);
+            hoffset = document.documentElement.clientHeight / scale - calc_container.offsetHeight;
+
+            // Fit horizontally or vertically
+            document.body.style.width = document.documentElement.clientWidth / scale + "px";
+            document.body.style.transform = "scale(" + scale + ")";
+            calc_container.style.top = hoffset / 2 + "px";
+        }
+
+        fitCalcToScreen()
+        window.onresize = fitCalcToScreen;
+    </script>
 </body>
 </html>
