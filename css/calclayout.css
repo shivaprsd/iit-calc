@@ -4,8 +4,10 @@
     -moz-box-sizing: border-box; 
 }
 
+html{ margin: 0; }
 body{
     font-family: Arial;
+    margin: 0;
 }
 .calc_close{
 	background: url('../images/Sprite.png') no-repeat -204px -13px;
