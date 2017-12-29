@@ -86,6 +86,7 @@
 </head>
 <!--<body class="unselectable" oncontextmenu="return false;" onselect="return false;" ondragstart="return false;" onmousewheel="return false;">-->
 <body>
+    <div id="topBar">&nbsp;</div>
 	<div id="keyPad" class="ui-widget-content calc_container">
     <!-- new Help changes -->
     <div id="helptopDiv">
@@ -251,6 +252,9 @@
             document.body.style.width = document.documentElement.clientWidth / scale + "px";
             document.body.style.transform = "scale(" + scale + ")";
             calc_container.style.top = hoffset / 2 + "px";
+
+            // Resize blue top bar
+            document.getElementById("topBar").style.height = parseInt(calc_container.style.top) + parseInt(document.getElementById("helptopDiv").clientHeight) + "px";
         }
 
         fitCalcToScreen()

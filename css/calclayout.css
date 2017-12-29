@@ -7,10 +7,20 @@
 html{ margin: 0; }
 body{
     font-family: Arial;
+    background-color: #dadada;
     margin: 0;
     position: fixed;
     transform-origin: left top;
 }
+#topBar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    background-color:#4286f3;
+}
+
 .calc_close{
 	background: url('../images/Sprite.png') no-repeat -204px -13px;
 	width: 16px;
@@ -134,12 +144,12 @@ padding:10px;
 }
 .calc_container {
     background: none repeat scroll 0 0 #dadada;
-    border: 1px solid #aaa;
+    /* border: 1px solid #aaa;
     border-radius: 5px;
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1) inset; */
     padding: 0px;
     width: 463px;
-    border-bottom: 7px solid #999;
+    /* border-bottom: 7px solid #999; */
     position:relative;
     margin: 0 auto;
 }
