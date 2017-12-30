@@ -93,11 +93,11 @@
 	<span>Scientific Calculator</span>
 	<div href="#nogo" id="keyPad_Help" class="help_back"></div>
 	<div style="display:none;" href="#nogo" id="keyPad_Helpback" class="help_back"></div>
-	</div>
      <!-- new Help changes -->
      <div class="calc_min" id="calc_min"></div>
      <!-- <div class="calc_max hide" id="calc_max"></div> -->
 	 <div class="calc_close" id="closeButton"></div>
+	</div>
 	 <!-- main content start here-->
 	 <div id="mainContentArea">
 		<input type="text" id="keyPad_UserInput1" class="keyPad_TextBox1" readonly />
@@ -257,7 +257,18 @@
             document.getElementById("topBar").style.height = parseInt(calc_container.style.top) + parseInt(document.getElementById("helptopDiv").clientHeight) + "px";
         }
 
-        fitCalcToScreen()
+        function toggleHelpBar() {
+            help_bar = document.getElementById("helptopDiv");
+
+            if (help_bar.offsetParent == null) {
+                help_bar.style.display = "block";
+            } else {
+                help_bar.style.display = "none";
+            }
+            fitCalcToScreen();
+        }
+
+        fitCalcToScreen();
         window.onresize = fitCalcToScreen;
     </script>
 </body>
