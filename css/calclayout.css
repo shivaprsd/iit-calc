@@ -339,7 +339,7 @@ background: none repeat scroll 0 0 #e74c3c;
 {
 	
     height: 263px;
-    margin-right: 6px;
+    /* margin-right: 6px; */
     overflow: auto;
     padding: 10px;
 }
