@@ -219,7 +219,7 @@ padding:10px;
    display:inline;
   /*  position: absolute; */
 }
- .memoryhide {
+ .memoryhide, .memoryshow {
   visibility: hidden;
   position: absolute;
   top: 52px;
@@ -231,6 +231,7 @@ padding:10px;
 .memoryshow {
   visibility: visible;
   opacity: 1;
+  transition: opacity 0.2s;
 } 
 
 /* INPUT/MEM TEXT BOXES*/
